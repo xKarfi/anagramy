@@ -1,9 +1,12 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+
 using namespace std;
+
 class anagramy
 {
+
        ifstream p1;
        ofstream p2;
 
@@ -24,13 +27,13 @@ void anagram()
 
 bool czy_anagram = true;
 string s1,s2;
-
+    p2<<"["<<endl;
      while(!p1.eof())
 {
 
     p1>>s1>>s2;
 
-    if(s1.length()!=s1.length())
+    if(s1.length()!=s2.length())
        czy_anagram=false;
 
 
@@ -59,10 +62,9 @@ if (czy_anagram == true)
 p2<<"{\"slowo1\": "<<s1<<", slowo2\": "<<s2<<", \"anagram\":\""<<" TAK"<<"}"<<endl;
 else
 p2<<"{\"slowo1\": "<<s1<<", slowo2\": "<<s2<<", \"anagram\":\""<<" NIE"<<"}"<<endl;
-
-
-
+p2<<"]"<<endl;
 }
+
 
 
 
